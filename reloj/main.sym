@@ -1,0 +1,119 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+005.1   RA1
+005.2   RA2
+005.3   RA3
+005.4   RA4
+005.5   RA5
+006     lcd
+015-016 CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     count
+02B     h
+02C     min
+02D     seg
+02E     ah
+02F     amin
+030     al
+031     alarm
+032     p
+033     mode
+034     lcd_init.i
+034     MAIN.@SCRATCH
+035     lcd_init.@SCRATCH
+03B     TIMER0_isr.@SCRATCH
+03C     TIMER0_isr.@SCRATCH
+03D     TIMER0_isr.@SCRATCH
+03E     @PRINTF_D_75.P1
+03F     @PRINTF_D_75.P1
+040     @PRINTF_D_75.@SCRATCH
+041     @PRINTF_D_75.@SCRATCH
+042     @PRINTF_D_75.@SCRATCH
+043     @PRINTF_D_75.@SCRATCH
+044     lcd_putc.c
+044     @DIV88.P1
+045     lcd_gotoxy.x
+045     @delay_ms1.P1
+045     @DIV88.P2
+046     lcd_gotoxy.y
+046     @DIV88.@SCRATCH
+047     lcd_gotoxy.address
+048     lcd_gotoxy.@SCRATCH
+049     lcd_send_byte.address
+04A     lcd_send_byte.n
+04B     lcd_read_byte.low
+04B     lcd_send_byte.@SCRATCH
+04C     lcd_read_byte.high
+04C     lcd_send_nibble.n
+04D     lcd_read_byte.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY.P1
+
+0221  @delay_ms1
+0033  LCD_INIT_STRING
+01DD  lcd_read_byte
+01FA  lcd_send_nibble
+0206  lcd_send_byte
+05C2  lcd_init
+024D  lcd_gotoxy
+0236  lcd_putc
+02E5  TIMER0_isr
+003B  @const92
+026B  @DIV88
+0280  @PRINTF_D_75
+0061  @const99
+008F  @const100
+00BD  @const101
+00E8  @const102
+0100  @const103
+0115  @const104
+012E  @const105
+0144  @const106
+015C  @const107
+0178  @const108
+01A8  @const109
+01C3  @const110
+05B2  MAIN
+05B2  @cinit
+
+Project Files:
+    main.c
+    main.h
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16F628.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c
+
+Units:
+    C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F628
+    Pointer Size:   16
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.err
+    Ext Symbols: C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.esym
+    INHX8:       C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.hex
+    Symbols:     C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.sym
+    List:        C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.lst
+    Debug/COFF:  C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.cof
+    Call Tree:   main.tre
+    Statistics:  main.sta

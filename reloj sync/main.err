@@ -1,0 +1,4 @@
+>>> Warning 203 "C:\Users\melvi_000\Documents\Pic Compiler\reloj sync\ds1307.c" Line 108(1,1): Condition always TRUE
+>>> Warning 216 "main.c" Line 203(0,1): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+      Memory usage:   ROM=97%      RAM=13% - 20%
+      0 Errors,  2 Warnings.

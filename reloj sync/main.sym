@@ -1,0 +1,140 @@
+004-005 @READ_PROGRAM_MEMORY.P1
+006.0   RB0
+006.3   RB3
+015-016 CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     h
+02B     min
+02C     seg
+02D     day
+02E     mth
+02F     year
+030     dow
+031     sync
+032     mode
+033     pass
+034     B0
+035     ds1307_set_date_time.day
+035     ds1307_init.seconds
+035     lcd_init.i
+035     lcd_setcursor_vb.visible
+035     ds1307_get_date.@SCRATCH
+035     ds1307_get_time.@SCRATCH
+035     MAIN.@SCRATCH
+036     ds1307_set_date_time.mth
+036     lcd_setcursor_vb.blink
+036     lcd_init.@SCRATCH
+036     ds1307_init.@SCRATCH
+036     ds1307_get_date.@SCRATCH
+036     ds1307_get_time.@SCRATCH
+036     MAIN.@SCRATCH
+037     @PRINTF_D_56.P1
+037     ds1307_set_date_time.year
+037     lcd_setcursor_vb.@SCRATCH
+038     ds1307_set_date_time.dow
+038     @PRINTF_D_56.P1
+038     lcd_setcursor_vb.@SCRATCH
+039     ds1307_set_date_time.hr
+039     @I2C_READ_1.P1
+039     @PRINTF_D_56.@SCRATCH
+03A     ds1307_set_date_time.min
+03A     @I2C_READ_1.@SCRATCH
+03A     @PRINTF_D_56.@SCRATCH
+03B     ds1307_set_date_time.sec
+03B     bcd2bin.bcd_value
+03B     @I2C_READ_1.@SCRATCH
+03B     @PRINTF_D_56.@SCRATCH
+03C     bin2bcd.binary_value
+03C     bcd2bin.temp
+03C     ds1307_set_date_time.@SCRATCH
+03C     @PRINTF_D_56.@SCRATCH
+03D     @DIV88.P1
+03D     bin2bcd.temp
+03D     @I2C_WRITE_1.P1
+03D     lcd_putc.c
+03D     bcd2bin.@SCRATCH
+03E     @DIV88.P1
+03E     bin2bcd.retval
+03E     lcd_gotoxy.x
+03F     lcd_gotoxy.y
+03F     @DIV88.@SCRATCH
+040     lcd_gotoxy.address
+041     lcd_gotoxy.@SCRATCH
+042     lcd_send_byte.address
+043     lcd_send_byte.n
+044     lcd_send_byte.@SCRATCH
+045     lcd_send_nibble.nibble
+046     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY.P1
+
+00C6  @delay_ms1
+0033  LCD_INIT_STRING
+00E7  lcd_send_nibble
+0110  lcd_send_byte
+0137  lcd_init
+02E3  lcd_gotoxy
+02F5  lcd_putc
+039A  lcd_setcursor_vb
+01AA  @I2C_READ_1
+0176  @I2C_WRITE_1
+0203  ds1307_init
+0289  ds1307_set_date_time
+0741  ds1307_get_date
+06EF  ds1307_get_time
+01F0  bin2bcd
+01DD  bcd2bin
+00DB  interrupcio
+03A4  MAIN
+003B  @const107
+0058  @const108
+0075  @const110
+0320  @DIV88
+0335  @PRINTF_D_56
+00A7  @const117
+00B6  @const118
+03A4  @cinit
+
+Project Files:
+    main.c
+    main.h
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16F628A.h
+    flex_lcd.c
+    ds1307.c
+
+Units:
+    C:\Users\melvi_000\Documents\Pic Compiler\reloj sync\main.c (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      0
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      C:\Users\melvi_000\Documents\Pic Compiler\reloj sync\main.err
+    Ext Symbols: C:\Users\melvi_000\Documents\Pic Compiler\reloj sync\main.esym
+    INHX8:       C:\Users\melvi_000\Documents\Pic Compiler\reloj sync\main.hex
+    Symbols:     C:\Users\melvi_000\Documents\Pic Compiler\reloj sync\main.sym
+    List:        C:\Users\melvi_000\Documents\Pic Compiler\reloj sync\main.lst
+    Debug/COFF:  C:\Users\melvi_000\Documents\Pic Compiler\reloj sync\main.cof
+    Call Tree:   main.tre
+    Statistics:  main.sta

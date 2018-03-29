@@ -1,0 +1,31 @@
+[PROJECT]
+Target=main.hex
+Development_Mode=
+Processor_Text=PIC16F628
+ToolSuite=CCS
+Processor=0x6628
+[main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=main
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.c
+2=
+3=C:\Users\melvi_000\Desktop\interrupts\interrupts\main.c
+4=C:\Users\melvi_000\Documents\Pic Compiler\reloj\flex_lcd.c
+5=C:\Program Files (x86)\PICC\drivers\lcd.c
+6=
+[Target Data]
+OptionString=-p +FM
+FileList=C:\Users\melvi_000\Documents\Pic Compiler\reloj\main.c
+[Units]
+Count=1
+1=main.c (main)
+Link=0
